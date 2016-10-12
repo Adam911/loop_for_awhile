@@ -1,20 +1,20 @@
-var plates = 'CL 124,CY 567,CL 345, CJ 456,CL 341';
 
+function firstPaarl(regNumbers) {
 
-function firstPaarl(paarlPlate) {
-  var eplates = [];
-  var paarlPlate = plates;
-  var plates = paarlPlate.split(',');
+  var plates = regNumbers.split(',');
+
+  var firstRegNum = [];
 
   for (var i = 0; i < plates.length; i++) {
 
-
-    if (paarlPlate.startsWith("CJ")) {
-       eplates.push(paarlPlate);
+    if (plates[i].startsWith("CJ")) {
+      console.log(plates[i]);
+      firstRegNum.push(plates[i]);
+      return plates[i];
     }
   }
-  console.log(eplates);
-
+return firstRegNum;
 }
 
-firstPaarl(paarlPlate);
+
+firstPaarl('CJ 456,CY 567,CL 345,CL 456,CL 341');
