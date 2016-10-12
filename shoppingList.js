@@ -7,12 +7,11 @@ function shoppingList(stringToSplit) {
   var arrayOfStrings = stringToSplit.split(',');
 
   for (var i = 0; i < arrayOfStrings.length; i++) {
-     console.log(arrayOfStrings[i]);
-   }
+    console.log(arrayOfStrings[i]);
+  }
 
 }
 
+assert.equal('Shopping List: ' + groceries);
 
-assert.equal('Shopping List: '+groceries);
-
-shoppingList('Shopping List: '+groceries);
+shoppingList('Shopping List: ' + groceries);
