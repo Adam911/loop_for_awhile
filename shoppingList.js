@@ -10,7 +10,9 @@ function shoppingList(stringToSplit) {
      console.log(arrayOfStrings[i]);
    }
 
-
 }
+
+
+assert.equal('Shopping List: '+groceries);
 
 shoppingList('Shopping List: '+groceries);
