@@ -16,5 +16,4 @@ function firstPaarl(regNumbers) {
 return firstRegNum;
 }
 
-
 firstPaarl('CJ 456,CY 567,CL 345,CL 456,CL 341');
