@@ -1,4 +1,3 @@
-
 function allPaarl(regNumbers) {
 
   var plates = regNumbers.split(',');
@@ -13,7 +12,7 @@ function allPaarl(regNumbers) {
       return plates[i];
     }
   }
-return paarlRegNums;
+  return paarlRegNums;
 }
 
 allPaarl('CJ 456,CY 567,CJ 345,CL 456,CJ 362')
