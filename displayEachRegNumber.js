@@ -10,7 +10,6 @@ function displayEachNumber(eachPlate) {
 
   }
   //assert.equal(regNumbers[i++]);
-
 }
 
 displayEachNumber(regNumbers);
