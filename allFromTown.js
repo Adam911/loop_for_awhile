@@ -1,29 +1,28 @@
-
-var fromStellies = allFromTown('CL 124,CY 567,CL 345, CJ 456,CL 341','CL');
-
+const assert = require('assert');
 //fromStellies should contains
-assert.deepEqual(fromStellies, [CL 124, CL 345, CL 341])
-
-var fromKuilsriver = allFromTown('CL 124,CY 567,CL 345, CJ 456,CL 341','CF');
-
-assert.deepEqual(fromKuilsriver, []);
 
 
-function allFromTown(assingPlate) {
-  var splitReg = RegNum.split(',');
-  var assingPlate = [];
-  var stbArr = [];
-  for (var i = 0; i < splitReg.length; i++) {
-    assingPlate.push(splitReg[i]);
+function allFromTown(fromTown, location) {
+  var splitThis = fromTown.split(',');
+  // var assingPlate = [];
+  var hinged = [];
 
-    //console.log(holdingRegNum[i]);
-    if (assingPlate[i].includes('CJ')) {
-      stbArr.push(assingPlate[i]);
+  for (var i = 0; i < splitThis.length; i++) {
+
+    if (splitThis[i].startsWith(location)) {
+      hinged.push(splitThis[i]);
     }
-
   }
-  console.log(stbArr);
-
+  console.log(hinged);
+  return hinged;
 }
-//The Stellies should return its own string in a console.log()
-//then the same goes for Kayla
+//assert.deepEqual(allFromTown, []);
+
+
+var fromKuilsriver = allFromTown('CL 124,CY 567,CL 345,CJ 456,CL 341','CY');
+var fromStellies = allFromTown('CL 124,CY 567,CL 345,CJ 456,CL 341','CL');
+
+assert.deepEqual(fromKuilsriver,['CY 567']);
+assert.deepEqual(fromStellies, ['CL 124','CL 345','CL 341'])
+//Printing out the list and using an if statement
+//to see if the mathces the exact given.

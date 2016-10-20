@@ -1,6 +1,5 @@
 var chosenRegNum = 'CL 124,CY 567,CL 345, CJ 496,CL 341';
 
-
 function allPaarl(RegNum) {
   var splitReg = RegNum.split(',');
   var holdingRegNum = [];
